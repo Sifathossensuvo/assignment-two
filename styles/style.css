@@ -1,0 +1,97 @@
+/* Thanks for "PROGRAMMING-HERO" */
+
+
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+/* ------------------------------------------- */
+/* sherd styles */
+*{
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+header,
+main
+{
+width: 85%;
+margin: 0 auto;
+}
+header{
+    background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
+}
+.btn-primary{
+    padding: 8px 20px 8px 20px;
+    border-radius: 2.875rem;
+    background: rgb(230, 83, 60);
+    border: none;
+    color: rgb(255, 255, 255);
+font-size: 1.125rem;
+font-weight: 600;
+}
+.primary-heading{
+    color: rgb(255, 255, 255);
+font-size: 3rem;
+font-weight: 900;
+}
+.primary-paragraph{
+    color: rgba(255, 255, 255, 0.5);
+font-size: 1rem;
+font-weight: 400;
+}
+body button, a{
+cursor: pointer;
+}
+/* ------------------------------------------- */
+/* header */
+/* nav */
+#nav-title{
+    color:rgb(230, 83, 60);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.375rem 0;
+}
+.second-div a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+font-size: 1.125;
+font-weight: 400;
+margin-right: 3.75rem;
+}
+.second-div{
+    box-sizing: border-box;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 2.4375rem;
+padding: 5px;
+}
+/* main */
+
+
+
+/* footer */
+
+
+/* ------------media screen----------------- */
+/* mobile */
+@media screen and (max-width: 576px) {
+    header,
+    main
+    {
+        width: 90%;
+    }
+    nav > .second-div{
+        display: none;
+    }
+}
