@@ -8,16 +8,23 @@
     font-variation-settings:
       "slnt" 0;
   }
-  .mr-de-haviland-regular {
-    font-family: "Mr De Haviland", cursive;
-    font-weight: 400;
+  .dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
     font-style: normal;
-    font-weight:500;    
+    font-weight: 400;
   }
+  
   
 /* sherd styles */
 *{
     margin: 0;
+}
+.mb{
+    margin-bottom: 15px;
+}
+.text-center{
+    text-align: center;
 }
 body{
     background-color:#000000;
@@ -30,6 +37,55 @@ margin: 0 auto;
 }
 header{
     background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
+}
+/* btn-hover */
+.btn-primary { 
+    outline: none;
+    position: relative;
+}
+
+.btn-primary:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.btn-primary:active:after {
+    background: transparent;
+}
+
+.btn-primary:hover:before {
+    opacity: 1;
+}
+
+.btn-primary:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 2.875rem;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 .btn-primary{
     
@@ -142,7 +198,7 @@ background: rgba(48, 48, 48, 0.54);
 gap: 1rem;
 position: absolute;
 top: 415px;
-right: 225px;
+right: 250px;
 }
 .workout{
     width: 12rem;
@@ -165,9 +221,52 @@ right: 225px;
 }
 
 /* main */
+/* habit section */
+.habits-section{
+    margin-top: 6.25rem;
+}
 
-
-
+.habit-heading{
+    color: rgb(255, 255, 255);
+font-size: 1.125rem;
+font-weight: 600;
+text-align: center;
+margin-top: 1.563rem;
+}
+.habit-img{
+border-radius: 50%;
+width: 15.625rem;
+}
+.habit-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3.438rem;
+}
+/* practice section */
+.practice-section{
+    padding: 40px 40px 40px 40px;
+    border-radius: 1.125rem;
+background: rgb(34, 34, 34);
+display: flex;
+justify-content: space-between;
+height: 25rem;
+margin-top: 100px;
+}
+#practice-btn{
+    width: 13.75rem;
+}
+.practice-conten{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.run{
+   border-radius: 1.125rem;
+   height: 100%;
+}
+#practice-p{
+    line-height: 1.875rem;
+}
 /* footer */
 
 
@@ -187,22 +286,26 @@ right: 225px;
     .responsive-menu{
         display: block;
     }
+    /* banner */
     .banner{
         flex-direction: column;
-        gap: 40px;
+        gap: 2.5rem;
     }
     .workout{
-        top: 20px;
-        right: -110px;
-        width: 170px;
+        top: 1.25rem;
+        right: -6.875rem;
+        width: 10.625rem;
+        padding: 0 5px;
+        
     }
     .tutorial{
         
-top: 250px;
-right:90px;
-width: 170px;
+top: 15.625rem;
+right:5.625rem;
+width: 10.625rem;
 padding-left: 5px;
 padding-right: 5px;
+height: 6.25rem;
     }
     .btn{
         display: flex;
@@ -210,5 +313,30 @@ padding-right: 5px;
     .hide{
         display: none;
     }
-    
+    .banner-title{
+        color: rgb(255, 255, 255);
+font-size: 36px;
+font-weight: 900;
+    }
+    /* habit section */
+    .habit-container{
+        flex-direction: column;
+        
+    }
+    .habits-section{
+        margin-top: 5px;
+    }
+    /* practice section */
+    .practice-section{
+        flex-direction: column;
+        height: 100%;
+        margin: 0 10px;
+    }
+    .run{
+        width: 100%;
+        margin-top: 30px;
+    }
+    #practice-btn{
+        width: 100%;
+    }
 }
