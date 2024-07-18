@@ -8,15 +8,21 @@
     font-variation-settings:
       "slnt" 0;
   }
-/* ------------------------------------------- */
+  .mr-de-haviland-regular {
+    font-family: "Mr De Haviland", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight:500;    
+  }
+  
 /* sherd styles */
 *{
     margin: 0;
 }
 body{
-    background-color: black;
+    background-color:#000000;
 }
-header,
+.header-section,
 main
 {
 width: 85%;
@@ -26,13 +32,14 @@ header{
     background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
 }
 .btn-primary{
-    padding: 8px 20px 8px 20px;
+    
     border-radius: 2.875rem;
     background: rgb(230, 83, 60);
     border: none;
     color: rgb(255, 255, 255);
 font-size: 1.125rem;
 font-weight: 600;
+padding: 16px 40px 16px 40px;
 }
 .primary-heading{
     color: rgb(255, 255, 255);
@@ -47,7 +54,6 @@ font-weight: 400;
 body button, a{
 cursor: pointer;
 }
-/* ------------------------------------------- */
 /* header */
 /* nav */
 #nav-title{
@@ -57,7 +63,7 @@ cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3.375rem 0;
+   padding: 3.375rem 0;
 }
 .second-div a{
     text-decoration: none;
@@ -72,6 +78,92 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 border-radius: 2.4375rem;
 padding: 5px;
 }
+.fa-solid{
+    color: wheat;
+}
+.responsive-menu{
+    display: none;
+}
+/* banner */
+.banner-title{
+    color: rgb(255, 255, 255);
+font-size: 4.875rem;
+font-weight: 900;
+line-height: 120%;
+}
+#banner-btn{
+background-color: #000000;
+border: 1px solid rgb(255, 255, 255);
+}
+#banner-first-btn{
+    margin-right: 1rem;
+}
+.banner-content h4, p{
+    margin-bottom: 2.125rem;
+}
+.banner{
+    margin-top: 2.75rem;
+    display: flex
+}
+.banner-img{
+    margin-right: 6.25rem;
+    height: 100%;
+}
+.banner{
+    gap: 170px;
+    justify-content: space-between;
+}
+.tutorial > .tutorial-ball{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgb(230, 83, 60);
+}
+.banner-img{
+    position: relative;
+}
+.tutorial-content-title{
+    color: rgb(250, 250, 249);
+font-size: 1.5rem;
+font-weight: 900;
+line-height: 1.5rem;
+}
+.tutorial-ball, .tutorial-content{
+    margin-top: 30px;
+} 
+.tutorial{
+    display: flex;
+    justify-content: center;
+    width: 12.5rem;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 0.75rem;
+backdrop-filter: blur(20px);
+background: rgba(48, 48, 48, 0.54);
+gap: 1rem;
+position: absolute;
+top: 415px;
+right: 225px;
+}
+.workout{
+    width: 12rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    backdrop-filter: blur(20px);
+    background: rgba(48, 48, 48, 0.54);    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem;
+    padding: 5px 5px;
+    position: absolute;
+    top: 100px;
+    right: -50px;
+}
+.workout-content{
+    margin-top: 1.875rem;
+}
+
 /* main */
 
 
@@ -79,15 +171,44 @@ padding: 5px;
 /* footer */
 
 
-/* ------------media screen----------------- */
-/* mobile */
+/* mobile responsive */
 @media screen and (max-width: 576px) {
-    header,
+    .header,
     main
     {
-        width: 90%;
+        width: 100%;
+        
+    
     }
+    
     nav > .second-div{
         display: none;
     }
+    .responsive-menu{
+        display: block;
+    }
+    .banner{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .workout{
+        top: 20px;
+        right: -110px;
+        width: 170px;
+    }
+    .tutorial{
+        
+top: 250px;
+right:90px;
+width: 170px;
+padding-left: 5px;
+padding-right: 5px;
+    }
+    .btn{
+        display: flex;
+    }
+    .hide{
+        display: none;
+    }
+    
 }
