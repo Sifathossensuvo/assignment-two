@@ -38,55 +38,7 @@ margin: 0 auto;
 header{
     background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
 }
-/* btn-hover */
-.btn-primary { 
-    outline: none;
-    position: relative;
-}
 
-.btn-primary:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-
-.btn-primary:active:after {
-    background: transparent;
-}
-
-.btn-primary:hover:before {
-    opacity: 1;
-}
-
-.btn-primary:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 2.875rem;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
 .btn-primary{
     
     border-radius: 2.875rem;
@@ -96,6 +48,10 @@ header{
 font-size: 1.125rem;
 font-weight: 600;
 padding: 16px 40px 16px 40px;
+transition: background-color 0.45s;
+}
+.btn-primary:hover{
+    background-color: rgb(141, 40, 24);
 }
 .primary-heading{
     color: rgb(255, 255, 255);
@@ -134,11 +90,12 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 border-radius: 2.4375rem;
 padding: 5px;
 }
-.fa-solid{
-    color: wheat;
+.responsive-menu i{
+    color: white;
 }
 .responsive-menu{
     display: none;
+    
 }
 /* banner */
 .banner-title{
@@ -186,7 +143,7 @@ line-height: 1.5rem;
 }
 .tutorial-ball, .tutorial-content{
     margin-top: 30px;
-} 
+}
 .tutorial{
     display: flex;
     justify-content: center;
@@ -211,10 +168,12 @@ right: 250px;
     justify-content: center;
     align-items: center;
     height: 6.25rem;
-    padding: 5px 5px;
+    
     position: absolute;
     top: 100px;
     right: -50px;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 .workout-content{
     margin-top: 1.875rem;
@@ -246,11 +205,12 @@ width: 15.625rem;
 .practice-section{
     padding: 40px 40px 40px 40px;
     border-radius: 1.125rem;
-background: rgb(34, 34, 34);
+    background: rgb(34, 34, 34);
 display: flex;
 justify-content: space-between;
 height: 25rem;
 margin-top: 100px;
+
 }
 #practice-btn{
     width: 13.75rem;
@@ -267,6 +227,36 @@ margin-top: 100px;
 #practice-p{
     line-height: 1.875rem;
 }
+/* best body section  */
+.best-body{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+.card-perant{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    margin-top: 50px;
+}
+.card{
+    margin-top: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    width: 18.75rem;
+    height: 23.75rem;
+    padding: 30px 30px;
+    border-radius: 8px;
+}
+#card-title{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+#choose{
+   color: rgba(255, 255, 255, 0.5);
+}
+/* bmi section */
+
 /* footer */
 
 
@@ -330,7 +320,8 @@ font-weight: 900;
     .practice-section{
         flex-direction: column;
         height: 100%;
-        margin: 0 10px;
+        
+       
     }
     .run{
         width: 100%;
@@ -338,5 +329,12 @@ font-weight: 900;
     }
     #practice-btn{
         width: 100%;
+    }
+    /* why choose us section */
+    .card-perant{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card{
+        margin: 0 auto;
     }
 }
