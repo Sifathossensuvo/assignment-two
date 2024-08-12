@@ -487,5 +487,7 @@ font-weight: 900;
     .choto-fild{
         height: 48px;
     }
-   
+   .this-section-heading{
+    margin-left: 15px;
+   }
 }
