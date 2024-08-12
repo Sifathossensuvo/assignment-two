@@ -322,7 +322,7 @@ line-height: 120%;
 }
 .last-select{
     grid-column: span 2;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: rgba(63, 62, 62, 0.5);
    border: none;
    border-radius: 8px;
@@ -330,13 +330,52 @@ line-height: 120%;
 
 #first-select{
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: rgba(63, 62, 62, 0.5);
    border: none;
    border-radius: 8px;
 }
+input::placeholder, select{
+    color: rgba(255, 255, 255, 0.6);
+}
+input{
+    color: white;
+}
 /* meet our team section */
-
+.team{
+    margin-top: 90px;
+}
+.team-title{
+    margin-bottom: 58px;
+}
+.galarry{
+    padding: 20px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+}
+.team-img img{
+    object-fit: fill;
+    border-radius: 18px;
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+}
+.team-heading{
+    color: #FFFFFF;
+    font-size: 1.25rem;
+}
+.photo{
+    position: relative;
+   
+}
+.team-content{
+    position: absolute;
+    top: 230px;
+    left: 15px;
+}
 /* footer */
 
 
@@ -490,4 +529,12 @@ font-weight: 900;
    .this-section-heading{
     margin-left: 15px;
    }
+   #bmi-heading{
+    font-size: 2rem;
+   }
+   /* <!-- meet our team section --> */
+.galarry{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 20px;
+}
 }
