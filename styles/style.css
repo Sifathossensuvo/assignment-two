@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
 
 .inter-font {
     font-family: "Inter", sans-serif;
@@ -8,11 +8,10 @@
     font-variation-settings:
       "slnt" 0;
   }
-  .dancing-script {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
+  .dancing-script{
+    font-family: "Mr De Haviland", cursive;
     font-weight: 400;
+    font-style: normal;
   }
   
   
@@ -30,7 +29,7 @@ body{
     background-color:#000000;
 }
 .header-section,
-main
+.first-main
 {
 width: 85%;
 margin: 0 auto;
@@ -90,7 +89,7 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 border-radius: 2.4375rem;
 padding: 5px;
 }
-.responsive-menu i{
+.menu-bar{
     color: white;
 }
 .responsive-menu{
@@ -181,89 +180,10 @@ right: 250px;
 
 /* main */
 /* habit section */
-.habits-section{
-    margin-top: 6.25rem;
-}
 
-.habit-heading{
-    color: rgb(255, 255, 255);
-font-size: 1.125rem;
-font-weight: 600;
-text-align: center;
-margin-top: 1.563rem;
-}
-.habit-img{
-border-radius: 50%;
-width: 15.625rem;
-}
-.habit-container{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3.438rem;
-}
-/* practice section */
-.practice-section{
-    padding: 40px 40px 40px 40px;
-    border-radius: 1.125rem;
-    background: rgb(34, 34, 34);
-display: flex;
-justify-content: space-between;
-height: 25rem;
-margin-top: 100px;
-
-}
-#practice-btn{
-    width: 13.75rem;
-}
-.practice-conten{
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-.run{
-   border-radius: 1.125rem;
-   height: 100%;
-}
-#practice-p{
-    line-height: 1.875rem;
-}
-/* best body section  */
-.best-body{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    
-}
-.card-perant{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 45px;
-    margin-top: 50px;
-}
-.card{
-    margin-top: 30px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.5);
-    width: 18.75rem;
-    height: 23.75rem;
-    padding: 30px 30px;
-    border-radius: 8px;
-}
-#card-title{
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
-#choose{
-   color: rgba(255, 255, 255, 0.5);
-}
-/* bmi section */
-
-/* footer */
-
-
-/* mobile responsive */
 @media screen and (max-width: 576px) {
     .header,
-    main
+    .first-main
     {
         width: 100%;
         
@@ -275,6 +195,7 @@ margin-top: 100px;
     }
     .responsive-menu{
         display: block;
+        color: white;
     }
     /* banner */
     .banner{
@@ -320,7 +241,7 @@ font-weight: 900;
     .practice-section{
         flex-direction: column;
         height: 100%;
-        
+        margin: 0 10px;
        
     }
     .run{
@@ -330,11 +251,81 @@ font-weight: 900;
     #practice-btn{
         width: 100%;
     }
+    #practice-heading,
+    #card-heading
+    {
+        font-size: 32px;
+    }
     /* why choose us section */
     .card-perant{
         grid-template-columns: repeat(1, 1fr);
     }
     .card{
         margin: 0 auto;
+        width: 300px;
     }
+    
+
+    
+    /* bmi */
+    .tabil-and-calculator{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .bmi-section-title{
+        text-align: left;
+    }
+    td{
+        border: 1px solid rgb(17, 9, 9);
+        width: 170px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1rem;
+        font-weight: 400;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .tabil-and-calculator{
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+     
+        
+        
+    }
+
+    #input-fild{
+        padding: 12px 12px;
+        background-color: rgba(63, 62, 62, 0.5);
+       border: none;
+       border-radius: 8px;
+       width: 170px;
+       height: 48px;
+       
+       
+    }
+    .input{
+        grid-template-columns: 2fr;
+       gap: 12px;
+        width: 100%;
+    }
+    .last-select{
+        grid-column: span 2;
+        width: 100%;
+    }
+    #heading{
+        font-size: 20px;
+    }
+
+    .input input, select{
+        font-size: 16px;
+        width: 100px;
+        
+    }
+    .choto-fild{
+        height: 48px;
+    }
+   
 }
