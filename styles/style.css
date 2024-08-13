@@ -377,8 +377,56 @@ input{
     left: 15px;
 }
 /* footer */
-
-
+.footer{
+    margin-top: 90px;
+    background: rgba(255, 255, 255, 0.1);
+   
+    padding: 66px 0;
+}
+#footer-first-heading{
+    color: rgb(230, 83, 60);
+    font-size:4.375rem;
+font-weight: 800;
+margin-bottom: 25px;
+}
+.footer-parant{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-second-heading{
+    color: rgb(255, 255, 255);
+font-family: Inter;
+font-size: 2rem;
+font-weight: 700;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: left;
+}
+.footer-parant > div h4{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 1.4375rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 20px;
+}
+.footer-parant > div a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+.copyright{
+    margin-top: 75px;
+   
+}
+.copyright hr{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.copyright p{
+    font-size: 20px;
+    margin-top: 40px;
+}
 /* mobile responsive */
 @media screen and (max-width: 576px) {
     .header,
@@ -536,5 +584,18 @@ font-weight: 900;
 .galarry{
     grid-template-columns: repeat(1, 1fr);
     margin: 0 20px;
+}
+/* footer */
+.footer-parant{
+    flex-direction: column;
+    gap: 40px;
+}
+.footer-parant{
+    margin-left: 20px;
+}
+.copyright{
+    
+    margin-left: 20px;
+    margin-right: 20px;
 }
 }
